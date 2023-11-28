@@ -1,0 +1,17 @@
+:host {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  gap: 30px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  text-align: center;
+}

@@ -1,0 +1,7 @@
+<app-child-observable-markforcheck [user$]="user$.asObservable()" />
+<app-child-observable-async [user$]="user$.asObservable()" />
+
+<div class="controls">
+  <app-counter />
+  <p-button label="Change name" (onClick)="changeName()" severity="warning"></p-button>
+</div>

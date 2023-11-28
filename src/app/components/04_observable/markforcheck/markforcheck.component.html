@@ -1,0 +1,6 @@
+<h2>markForCheck</h2>
+<h3 [@welcomeAnimation]="counter">{{ user?.name }}</h3>
+<p>
+  Child counter: <span [@welcomeAnimation]="counter">{{ counter }}</span>
+</p>
+<p-button label="Event trigger from child" (onClick)="fakeClick()" severity="success"></p-button>

@@ -1,0 +1,7 @@
+<app-default [user]="user" />
+<app-onpush [user]="user" />
+<div class="controls">
+  <p-button label="Change with mutation" (onClick)="changeNameMutation()" severity="warning"></p-button>
+  <p-button label="Change the reference" (onClick)="changeNameReference()" severity="success"></p-button>
+  <p-button label="Parent re-render" (onClick)="fakeClick()"></p-button>
+</div>

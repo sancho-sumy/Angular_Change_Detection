@@ -1,0 +1,74 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "sourceType": "module"
+      },
+      "plugins": ["@typescript-eslint", "@angular-eslint", "prettier", "rxjs", "@ngrx", "import"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:rxjs/recommended",
+        "plugin:@ngrx/recommended",
+        "prettier"
+      ],
+      "rules": {
+        "prettier/prettier": ["error"],
+        "import/order": [
+          "error",
+          {
+            "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Page", "Component"]
+          }
+        ],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": ["static-field", "static-method", "instance-field", "constructor", "instance-method"]
+          }
+        ],
+        "@ngrx/no-multiple-global-stores": "error",
+        "@ngrx/avoid-dispatching-multiple-actions-sequentially": "error",
+        "@ngrx/avoid-duplicate-actions-in-reducer": "error",
+        "@typescript-eslint/no-namespace": 0,
+        "@typescript-eslint/explicit-function-return-type": 1
+      }
+    },
+    {
+      "files": ["*.html"],
+      "plugins": ["@angular-eslint"],
+      "extends": ["plugin:@angular-eslint/template/recommended"]
+    }
+  ]
+}

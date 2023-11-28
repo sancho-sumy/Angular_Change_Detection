@@ -1,0 +1,7 @@
+<app-child-events [user]="user" />
+<div class="controls">
+  <app-counter />
+  <p-button label="Event trigger from parent" (onClick)="fakeClick()" severity="warning"></p-button>
+  <!-- <p-button label="Change the reference" (onClick)="changeNameReference()" severity="success"></p-button> -->
+  <!-- <p-button label="Parent re-render" (onClick)="fakeClick()"></p-button> -->
+</div>
